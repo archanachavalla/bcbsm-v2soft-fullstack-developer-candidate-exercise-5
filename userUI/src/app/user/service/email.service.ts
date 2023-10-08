@@ -7,7 +7,7 @@ import { Email } from "../Email";
   providedIn: "root",
 })
 export class EmailService {
-  private url = "http://localhost:8080/userExample/email";
+  private url = "http://localhost:8080/userApi/email";
 
   constructor(private http: HttpClient) {}
 

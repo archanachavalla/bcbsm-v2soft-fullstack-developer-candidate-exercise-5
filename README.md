@@ -20,3 +20,13 @@
     Springboot  
     Angular  
     MongoDB
+
+# To execute this demo:
+1. Pull the project into your local and make build
+2. To start back end server: Go to the path /userApi and execute "gradle bootrun"
+3. To start UI server: Go to the path /userUI and execute "ng serve"
+4. 2 users are loaded on server start (Tom Cruise - ADMIN role, John Doe - USER role)
+5. Bring up the application in any browser: http://localhost:4200
+6. To test as ADMIN, login by tcruise username. Email functionality should be available
+7. To test as USER, login by johndoe username. Sending feedback functionality should be available
+8. Open http://localhost:8080/userApi/h2-console  to check the database commits 

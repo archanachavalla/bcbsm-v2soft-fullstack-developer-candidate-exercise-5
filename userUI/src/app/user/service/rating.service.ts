@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
   providedIn: "root",
 })
 export class RatingService {
-  private url = "http://localhost:8080/userExample/rating";
+  private url = "http://localhost:8080/userApi/rating";
 
   constructor(private http: HttpClient) {}
 
