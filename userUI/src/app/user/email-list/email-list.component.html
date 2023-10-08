@@ -1,0 +1,21 @@
+<table matSort (matSortChange)="sortData($event)" class="emailTable">
+  <thead>
+  <tr class="emailHeaderRow">
+    <th mat-sort-header="toEmailId">TO</th>
+    <th mat-sort-header="fromEmailId">FROM</th>
+    <th mat-sort-header="fileName">FILENAME</th>
+    <th mat-sort-header="uploadUser">UPLOAD USER</th>
+    <th mat-sort-header="uploadDate">UPLOAD DATE</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="emailsListRow"
+      *ngFor="let email of sortedData">
+    <td>{{email.toEmailId}}</td>
+    <td>{{email.fromEmailId}}</td>
+    <td>{{email.fileName}}</td>
+    <td>{{email.uploadUser}}</td>
+    <td>{{email.uploadDate}}</td>
+  </tr>
+  </tbody>
+</table>

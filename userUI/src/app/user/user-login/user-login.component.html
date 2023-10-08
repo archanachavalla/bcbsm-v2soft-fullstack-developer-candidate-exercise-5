@@ -1,0 +1,30 @@
+<div>
+  <div>
+    <div><div *ngIf="!isAuthenticated">
+      <h2>Login</h2>
+      <h3>{{message}}</h3>
+      <form #userLogin="ngForm" (ngSubmit)="onSubmit(userLogin.value)">
+      <div>
+        <mat-label>User Name </mat-label>
+        <input type="text" name="username" placeholder="User Name" ngModel> <br> <br>
+      </div>
+        <button type="submit">Login</button>
+      </form></div>
+
+      <div *ngIf="isAuthenticated">
+        <button type="button" (click)="logoutUser()">Logout</button>
+      </div>
+
+      <div *ngIf="isAuthenticated">
+        <h2>Welcome {{user.firstName}} {{user.lastName}}! -- {{user.role}}</h2>
+        <div *ngIf="user.role == 'ADMIN'">
+          <app-email-list></app-email-list>
+          <app-user-email></app-user-email>
+        </div>
+        <div *ngIf="user.role == 'USER'">
+          <app-user-rating></app-user-rating>
+        </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,15 @@
+#navTitle{
+  background-size:25px 25px; /* Must be a square */
+  background-color: #ffcc00;
+  background-position:0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; /* Must be half of one side of the square */
+  border-bottom: solid 1px black;
+}
+
+#pageTitle{
+  background-color: black;
+  color: #ffcc00;
+  font-size: 2em;
+  width: 200px;
+  height: 100%;
+  border-right: solid 1px black;
+}

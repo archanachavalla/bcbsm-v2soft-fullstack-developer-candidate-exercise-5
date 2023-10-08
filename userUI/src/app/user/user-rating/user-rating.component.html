@@ -1,0 +1,20 @@
+<div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div *ngIf="ratingMessage"><h4>{{ratingMessage}}</h4></div>
+    <div class="form-group"><div>
+      <mat-label>Select an option for rating</mat-label>
+      <mat-radio-group aria-label="Select an option" formControlName="ratingNumber">
+        <mat-radio-button value="4" >Strongly Agree</mat-radio-button>
+        <mat-radio-button value="3" >Agree</mat-radio-button>
+        <mat-radio-button value="2" >Neutral</mat-radio-button>
+        <mat-radio-button value="1" >Disagree</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div>
+      <mat-label>Enter a comment</mat-label> <br>
+      <textarea rows="5" class="form-control" name="comment" formControlName="comment" required></textarea>
+    </div>
+    <button type="submit" [disabled]="form.invalid">Submit Rating</button>
+    </div>
+  </form>
+</div>

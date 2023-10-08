@@ -1,0 +1,24 @@
+<div>
+  <h2>Email Form</h2>
+  <div>
+    <div *ngIf="message"><h3>{{message}}</h3></div>
+    <div>
+      <form #userEmail="ngForm" (ngSubmit)="onSubmit(userEmail.value)"><div>
+        <mat-label>To Email: </mat-label>
+        <input type="text" name="toEmailId" placeholder="To Email Id" ngModel> <br> <br>
+
+        <mat-label>From Email:</mat-label>
+        <input type="text" name="fromEmailId" placeholder="From Email Id" ngModel> <br> <br>
+
+        <mat-label>File Name: </mat-label>
+        <input type="text" name="fileName" placeholder="File Name" ngModel> <br> <br>
+
+        <mat-label>File Path: </mat-label>
+        <input type="text" name="filePath" placeholder="File Path" ngModel> <br> <br>
+      </div>
+        <button type="submit">Send Email</button>
+
+      </form>
+    </div>
+  </div>
+</div>
